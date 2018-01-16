@@ -56,6 +56,26 @@ namespace numberFun
             mess.message = "it snowed today!";
             mess.StateMessage();
 
+            int[] numbers = new int[5];
+            numbers[0] = 34234;
+            numbers[1] = 3443;
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            // values initialized with 0
+            Console.WriteLine(numbers[2]);
+
+            var names = new string[3] { "James", "Peter", "Simon"};
+            Console.WriteLine(names[0]);
+            Console.WriteLine(names[1]);
+            Console.WriteLine(names[2]);
+
+            bool[] vals = new bool[3];
+            vals[1] = true;
+            Console.WriteLine(vals[0]);
+            Console.WriteLine(vals[1]);
+            Console.WriteLine(vals[2]);
+
+
             //Console.WriteLine("Byte range: {0} {1}", byte.MinValue, byte.MaxValue);
             //Console.WriteLine("Float range: {0} - {1}", float.MinValue, float.MaxValue);
             //const float Pi = 3.14f;
