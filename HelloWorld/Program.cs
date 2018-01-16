@@ -35,44 +35,27 @@
 //}
 
 using System;
+// must import class
+using HelloWorld.People;
+using HelloWorld.Message;
 
 //cw tab tab = Console.WriteLine;
 
 namespace numberFun
 {
-    public class Person
-    {
-        public string FirstName;
-        public string LastName;
-
-        public void Introduce()
-        {
-            Console.WriteLine("My name is " + FirstName + " " + LastName + ".");
-        }
-    }
-
-    public class MessageMaker
-    {
-        public string message;
-        public void StateMessage()
-        {
-            Console.WriteLine("Here's something neat: " + message);
-        }
-
-    }
-    
     class Program
     {
         static void Main(string[] args)
         {
-            Person Mikey = new Person();
-            Mikey.FirstName = "MIKEY";
-            Mikey.LastName = "TERWILLAGER";
-            Mikey.Introduce();
+            Person mikey = new Person();
+            mikey.FirstName = "MIKEY";
+            mikey.LastName = "TERWILLAGER";
+            mikey.Introduce();
             
             MessageMaker mess = new MessageMaker();
             mess.message = "it snowed today!";
             mess.StateMessage();
+
             //Console.WriteLine("Byte range: {0} {1}", byte.MinValue, byte.MaxValue);
             //Console.WriteLine("Float range: {0} - {1}", float.MinValue, float.MaxValue);
             //const float Pi = 3.14f;
