@@ -40,10 +40,39 @@ using System;
 
 namespace numberFun
 {
+    public class Person
+    {
+        public string FirstName;
+        public string LastName;
+
+        public void Introduce()
+        {
+            Console.WriteLine("My name is " + FirstName + " " + LastName + ".");
+        }
+    }
+
+    public class MessageMaker
+    {
+        public string message;
+        public void StateMessage()
+        {
+            Console.WriteLine("Here's something neat: " + message);
+        }
+
+    }
+    
     class Program
     {
         static void Main(string[] args)
         {
+            Person Mikey = new Person();
+            Mikey.FirstName = "MIKEY";
+            Mikey.LastName = "TERWILLAGER";
+            Mikey.Introduce();
+            
+            MessageMaker mess = new MessageMaker();
+            mess.message = "it snowed today!";
+            mess.StateMessage();
             //Console.WriteLine("Byte range: {0} {1}", byte.MinValue, byte.MaxValue);
             //Console.WriteLine("Float range: {0} - {1}", float.MinValue, float.MaxValue);
             //const float Pi = 3.14f;
@@ -63,17 +92,24 @@ namespace numberFun
             //Console.WriteLine(numParse);
             Console.WriteLine("Handling conversion exceptions using try catch: ");
             //eg string to byte:
-            try
-            {
-                string a = "3232323";
-                byte b = Convert.ToByte(a);
-                Console.WriteLine(b);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("The Number is too large to convert to byte");
+            //try
+            //{
+            //    string a = "3232323";
+            //    byte b = Convert.ToByte(a);
+            //    Console.WriteLine(b);
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("The Number is too large to convert to byte");
                 
-            }
+            //}
+            byte myNumber = 15;
+            int yourNumber = myNumber;
+            Console.WriteLine(yourNumber);
+            int newNumber = 260;
+            byte anotherNumber = (byte)newNumber;
+            Console.WriteLine(anotherNumber);
+            Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue);
         }
     }
 }
