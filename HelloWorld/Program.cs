@@ -47,35 +47,6 @@ namespace numberFun
     {
         static void Main(string[] args)
         {
-            Person mikey = new Person();
-            mikey.FirstName = "MIKEY";
-            mikey.LastName = "TERWILLAGER";
-            mikey.Introduce();
-            
-            MessageMaker mess = new MessageMaker();
-            mess.message = "it snowed today!";
-            mess.StateMessage();
-
-            int[] numbers = new int[5];
-            numbers[0] = 34234;
-            numbers[1] = 3443;
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            // values initialized with 0
-            Console.WriteLine(numbers[2]);
-
-            var names = new string[3] { "James", "Peter", "Simon"};
-            Console.WriteLine(names[0]);
-            Console.WriteLine(names[1]);
-            Console.WriteLine(names[2]);
-
-            bool[] vals = new bool[3];
-            vals[1] = true;
-            Console.WriteLine(vals[0]);
-            Console.WriteLine(vals[1]);
-            Console.WriteLine(vals[2]);
-
-
             //Console.WriteLine("Byte range: {0} {1}", byte.MinValue, byte.MaxValue);
             //Console.WriteLine("Float range: {0} - {1}", float.MinValue, float.MaxValue);
             //const float Pi = 3.14f;
@@ -106,13 +77,64 @@ namespace numberFun
             //    Console.WriteLine("The Number is too large to convert to byte");
                 
             //}
-            byte myNumber = 15;
-            int yourNumber = myNumber;
-            Console.WriteLine(yourNumber);
-            int newNumber = 260;
-            byte anotherNumber = (byte)newNumber;
-            Console.WriteLine(anotherNumber);
-            Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue);
+            //byte myNumber = 15;
+            //int yourNumber = myNumber;
+            //Console.WriteLine(yourNumber);
+            //int newNumber = 260;
+            //byte anotherNumber = (byte)newNumber;
+            //Console.WriteLine(anotherNumber);
+            //Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue);
+
+            //Person mikey = new Person();
+            //mikey.FirstName = "MIKEY";
+            //mikey.LastName = "TERWILLAGER";
+            //mikey.Introduce();
+
+            //MessageMaker mess = new MessageMaker();
+            //mess.message = "it snowed today!";
+            //mess.StateMessage();
+
+            //int[] numbers = new int[5];
+            //numbers[0] = 34234;
+            //numbers[1] = 3443;
+            //Console.WriteLine(numbers[0]);
+            //Console.WriteLine(numbers[1]);
+            //// values initialized with 0
+            //Console.WriteLine(numbers[2]);
+
+            //var names = new string[3] { "James", "Peter", "Simon" };
+            //Console.WriteLine(names[0]);
+            //Console.WriteLine(names[1]);
+            //Console.WriteLine(names[2]);
+
+            //bool[] vals = new bool[3];
+            //vals[1] = true;
+            //Console.WriteLine(vals[0]);
+            //Console.WriteLine(vals[1]);
+            //Console.WriteLine(vals[2]);
+
+            //'string' is c# keyword that maps to a .net structure
+            string dogName = "Skip";
+            //can also use String class to get exact same result, but must import System.
+            String puppyName = "Skippy";
+            //likewise with other data types
+            int num = 2342;
+            Int32 num2 = 2342;
+            // concatenate a string
+            string firstName = "John";
+            string lastName = "Junior";
+            string fullName = firstName + " " + lastName;
+            Console.WriteLine(fullName);
+            // use format and join methods on strings
+            var formattedName = string.Format("His name was {0} {1}.", firstName, lastName);
+            Console.WriteLine(formattedName);
+            string[] namesList = new string[3] { "bill", "jack", "daniella" };
+            var joinedNames = string.Join(", ", namesList);
+            Console.WriteLine(joinedNames);
+            // use a verbatim string
+            var sentence = @"Here's the deal: if I'm going to pick where we go, then I get to pick up the...     check! 
+            Alright. Fine by me!";
+            Console.WriteLine(sentence);
         }
     }
 }
