@@ -154,8 +154,10 @@ namespace numberFun
             // enum is data type, so must explictly cast enum to int or byte, etc.
             byte MonVal = (byte)Days.Mon;
             int ThuVal = (int)Days.Thu;
+            // enum converted to string
             string MonStr = Days.Mon.ToString();
             string ThuStr = Days.Thu.ToString();
+            //output
             Console.WriteLine("Day # {0} " + "is {1}.", MonVal, MonStr);
             Console.WriteLine("Day # {0} " + "is {1}.", ThuVal, ThuStr);
 
