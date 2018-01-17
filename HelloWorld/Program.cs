@@ -114,27 +114,68 @@ namespace numberFun
             //Console.WriteLine(vals[2]);
 
             //'string' is c# keyword that maps to a .net structure
-            string dogName = "Skip";
-            //can also use String class to get exact same result, but must import System.
-            String puppyName = "Skippy";
-            //likewise with other data types
-            int num = 2342;
-            Int32 num2 = 2342;
-            // concatenate a string
-            string firstName = "John";
-            string lastName = "Junior";
-            string fullName = firstName + " " + lastName;
-            Console.WriteLine(fullName);
-            // use format and join methods on strings
-            var formattedName = string.Format("His name was {0} {1}.", firstName, lastName);
-            Console.WriteLine(formattedName);
-            string[] namesList = new string[3] { "bill", "jack", "daniella" };
-            var joinedNames = string.Join(", ", namesList);
-            Console.WriteLine(joinedNames);
-            // use a verbatim string
-            var sentence = @"Here's the deal: if I'm going to pick where we go, then I get to pick up the...     check! 
-            Alright. Fine by me!";
-            Console.WriteLine(sentence);
+//            string dogName = "Skip";
+//            //can also use String class to get exact same result, but must import System.
+//            String puppyName = "Skippy";
+//            //likewise with other data types
+//            int num = 2342;
+//            Int32 num2 = 2342;
+
+//            // concatenate a string
+//            string firstName = "John";
+//            string lastName = "Junior";
+//            string fullName = firstName + " " + lastName;
+//            Console.WriteLine(fullName);
+//            // use format and join methods on strings
+//            var formattedName = string.Format("His name was {0} {1}.", firstName, lastName);
+//            Console.WriteLine(formattedName);
+//            string[] namesList = new string[3] { "bill", "jack", "daniella" };
+//            var joinedNames = string.Join(", ", namesList);
+//            Console.WriteLine(joinedNames);
+//            // use a verbatim string
+//            var sentence = @"Here's the deal: if I'm going to pick where we go, then I get to pick up the...     check! 
+//            Alright. Fine by me!";
+//            Console.WriteLine(sentence);
+
+            //enums
+            var method = SeatingMethod.VIP;
+            Console.WriteLine((int)method);
+            var methodVal = 3;
+            Console.WriteLine((SeatingMethod)methodVal);
+            // convert enum to string
+            var methodStr = methodVal.ToString();
+            Console.WriteLine(SeatingMethod.VIP);
+            // console.writeLine always calls toString() on any value to a string
+            Console.WriteLine(SeatingMethod.VIP.ToString());
+            // convert string to enum  (must first parse string)
+            //string newMethod = "XVIP";
+
+            Console.WriteLine("DAY ENUMS:");
+            // enum is data type, so must explictly cast enum to int or byte, etc.
+            byte MonVal = (byte)Days.Mon;
+            int ThuVal = (int)Days.Thu;
+            string MonStr = Days.Mon.ToString();
+            string ThuStr = Days.Thu.ToString();
+            Console.WriteLine("Day # {0} " + "is {1}.", MonVal, MonStr);
+            Console.WriteLine("Day # {0} " + "is {1}.", ThuVal, ThuStr);
+
         }
+        public enum SeatingMethod
+        {
+            Regular = 1,
+            Enhanced = 2,
+            VIP = 3
+        }
+
+        public enum Days : byte
+        {
+            Sun = 0,
+            Mon,
+            Tue,
+            Wed,
+            Thu,
+            Fri
+        }
+    
     }
 }
