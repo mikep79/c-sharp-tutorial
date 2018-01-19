@@ -163,7 +163,11 @@ namespace numberFun
 
             Months FirstMon = Months.Jan;
             Console.WriteLine(FirstMon);
-
+            //convert to string
+            String FirstMonStr = Months.Jan.ToString();
+            Console.WriteLine(FirstMonStr);
+            int FirstMonId = (int)Months.Jan;
+            Console.WriteLine(FirstMonId);
         }
         public enum SeatingMethod
         {
