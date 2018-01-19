@@ -161,6 +161,9 @@ namespace numberFun
             Console.WriteLine("Day # {0} " + "is {1}.", MonVal, MonStr);
             Console.WriteLine("Day # {0} " + "is {1}.", ThuVal, ThuStr);
 
+            Months FirstMon = Months.Jan;
+            Console.WriteLine(FirstMon);
+
         }
         public enum SeatingMethod
         {
@@ -178,6 +181,11 @@ namespace numberFun
             Thu,
             Fri
         }
-    
+
+        public enum Months 
+        { 
+            Jan = 0, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec 
+        }
+
     }
 }
