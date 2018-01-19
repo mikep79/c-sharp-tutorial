@@ -168,6 +168,20 @@ namespace numberFun
             Console.WriteLine(FirstMonStr);
             int FirstMonId = (int)Months.Jan;
             Console.WriteLine(FirstMonId);
+
+            // reference and value types
+            int a = 5;
+            int b = a;
+            b++;
+            Console.WriteLine("a = {0}, b = {1}", a, b);
+            int[] numArr1 = new int[] { 10, 11, 12 };
+            int[] numArr2 = numArr1;
+            Console.WriteLine(numArr1[0]);
+            // changing value changes for all references that point to that memory value
+            numArr2[0] = 1;
+            Console.WriteLine(numArr1[0]);
+
+            // add incrementer to calculator
         }
         public enum SeatingMethod
         {
