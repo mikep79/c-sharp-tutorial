@@ -182,8 +182,7 @@ namespace numberFun
             numArr2[0] = 1;
             Console.WriteLine(numArr1[0]);
 
-            // add incrementer to calculator
-
+            // write a method to display "..." if sentence is too long
             string sentence = "Here is a Long Long Long Long Long Long Long Long Long Long Long Long Long sentence.";
             const int maxLength = 30;
 
@@ -213,9 +212,6 @@ namespace numberFun
                 string newSentence = System.String.Join(" ", wordsList) + "...";
                 Console.WriteLine(newSentence);
             }
-
-
-            // write a method to display ... if sentence is too long
 
             // refactor using static method returning a string
 
