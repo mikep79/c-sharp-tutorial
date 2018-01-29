@@ -181,7 +181,11 @@ namespace numberFun
             numArr2[0] = 1;
             Console.WriteLine(numArr1[0]);
 
-            Summarize.Summarizer();
+            string sampleSentence = "According to Strava, athletes with the Metro/heatmap opt-out privacy setting have all data excluded from the mapping project.";
+            const int sampleLength = 30;
+            var summary = Summarize.Summarizer(sampleLength, sampleSentence);
+            Console.WriteLine(summary);
+
         }
 
         public enum SeatingMethod

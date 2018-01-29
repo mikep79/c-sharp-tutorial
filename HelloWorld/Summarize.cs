@@ -5,17 +5,10 @@ namespace numberFun
 {
     public class Summarize
     {
-        public static void Summarizer()
+        public static string Summarizer(int maxLength, string sentence = "Here is a sample sentence.")
         {
             // write a method to display "..." if sentence is too long
-            string sentence = "According to Strava, athletes with the Metro/heatmap opt-out privacy setting have all data excluded from the mapping project.";
-            const int maxLength = 30;
-
-            if (sentence.Length < maxLength)
-            {
-                Console.WriteLine(sentence);
-            }
-            else
+            if (sentence.Length > maxLength)
             {
                 Console.WriteLine("The sentence is longer than {0} characters.", maxLength);
                 string[] words = sentence.Split(' ');
@@ -32,15 +25,12 @@ namespace numberFun
                     else
                         break;
                 }
-                // use .Join method on String .NET class
-                //store as new string and display
-                string newSentence = System.String.Join(" ", wordsList) + "...";
-                Console.WriteLine(newSentence);
-            }
-
-            // refactor using static method returning a string
-
-            // move to separate class
+                // join words and return
+                var summarySentence = System.String.Join(" ", wordsList) + "...";
+                return summarySentence;
+            } 
+            else
+                return sentence;
         }
     }
 }
