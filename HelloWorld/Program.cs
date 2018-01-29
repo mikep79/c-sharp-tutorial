@@ -35,6 +35,7 @@
 //}
 
 using System;
+using System.Collections.Generic;
 // must import class
 using HelloWorld.People;
 using HelloWorld.Message;
@@ -182,6 +183,44 @@ namespace numberFun
             Console.WriteLine(numArr1[0]);
 
             // add incrementer to calculator
+
+            string sentence = "Here is a Long Long Long Long Long Long Long Long Long Long Long Long Long sentence.";
+            const int maxLength = 30;
+
+            if (sentence.Length < maxLength)
+            {
+                Console.WriteLine(sentence);
+            }
+            else
+            {
+                Console.WriteLine("The sentence is longer than {0} characters.", maxLength);
+                string[] words = sentence.Split(' ');
+                // join words in loop into list. Break if longer than maxLength
+                var wordsList = new List<string>();
+                int totalLength = 0;
+                foreach (string word in words)
+                {
+                    if (totalLength < maxLength)
+                    {
+                        totalLength += word.Length + 1;
+                        wordsList.Add(word);
+                    }
+                    else
+                        break;
+                }
+                // use .Join method on String .NET class
+                //store as new string and display
+                string newSentence = System.String.Join(" ", wordsList) + "...";
+                Console.WriteLine(newSentence);
+            }
+
+
+            // write a method to display ... if sentence is too long
+
+            // refactor using static method returning a string
+
+            // move to separate class
+
         }
         public enum SeatingMethod
         {
