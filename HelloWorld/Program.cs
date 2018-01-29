@@ -183,7 +183,7 @@ namespace numberFun
 
             string sampleSentence = "According to Strava, athletes with the Metro/heatmap opt-out privacy setting have all data excluded from the mapping project.";
             const int sampleLength = 30;
-            var summary = Summarize.Summarizer(sampleLength, sampleSentence);
+            var summary = Summarize.Summarizer(sampleSentence, sampleLength);
             Console.WriteLine(summary);
 
         }

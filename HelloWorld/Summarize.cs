@@ -5,7 +5,7 @@ namespace numberFun
 {
     public class Summarize
     {
-        public static string Summarizer(int maxLength, string sentence = "Here is a sample sentence.")
+        public static string Summarizer(string sentence, int maxLength = 20)
         {
             // write a method to display "..." if sentence is too long
             if (sentence.Length > maxLength)
