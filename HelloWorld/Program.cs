@@ -202,7 +202,22 @@ namespace numberFun
             {
                 fileInfo.Create();
             }
-            fileInfo.Delete();
+            if (!fileInfo.Exists)
+            {
+                fileInfo.Delete();
+            }
+
+            Directory.CreateDirectory(@"c:\users\mike\desktop\test_dir");
+            var directs = Directory.GetDirectories(@"c:\users\mike\desktop\projects-2017");
+            foreach (var dir in directs)
+                Console.WriteLine(dir);
+            var dirRoots = Directory.GetDirectoryRoot(@"c:\users\mike\desktop\projects-2017");
+            Console.WriteLine("dirROots: " + dirRoots);
+            var fileArray = Directory.GetFiles(@"c:\users\mike\desktop\projects-2017", "*.py", SearchOption.AllDirectories);
+            foreach (var file in fileArray)
+                Console.WriteLine(file);
+
+
         }
 
         public enum SeatingMethod
