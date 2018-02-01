@@ -36,6 +36,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 // must import namespace
 using HelloWorld.People;
 using HelloWorld.Message;
@@ -186,6 +187,22 @@ namespace numberFun
             var summary = Summarize.Summarizer(sampleSentence, sampleLength);
             Console.WriteLine(summary);
 
+            var newFilePath = "c:\\users\\mike\\desktop\\test_file.copy.rtf";
+            if (!File.Exists(newFilePath))
+            {
+                File.Copy("c:\\users\\mike\\desktop\\test_file.rtf", newFilePath, false);
+                var fileText = File.ReadAllText(newFilePath);
+                Console.WriteLine(fileText);
+            }
+            File.Delete(@"c:\users\mike\desktop\health.copy.rtf");
+
+            var test2Path = @"c:\users\mike\desktop\test2_file.txt";
+            var fileInfo = new FileInfo(test2Path);
+            if (!fileInfo.Exists)
+            {
+                fileInfo.Create();
+            }
+            fileInfo.Delete();
         }
 
         public enum SeatingMethod
