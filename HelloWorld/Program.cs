@@ -213,9 +213,18 @@ namespace numberFun
                 Console.WriteLine(dir);
             var dirRoots = Directory.GetDirectoryRoot(@"c:\users\mike\desktop\projects-2017");
             Console.WriteLine("dirROots: " + dirRoots);
-            var fileArray = Directory.GetFiles(@"c:\users\mike\desktop\projects-2017", "*.py", SearchOption.AllDirectories);
-            foreach (var file in fileArray)
-                Console.WriteLine(file);
+            // get all python .py files
+            //var fileArray = Directory.GetFiles(@"c:\users\mike\desktop\projects-2017", "*.py", SearchOption.AllDirectories);
+            //foreach (var file in fileArray)
+            //    Console.WriteLine(file);
+
+            var test3Path = @"c:\users\mike\desktop\test_file3.txt";
+            var testFile3 = new FileInfo(test3Path);
+            FileStream tf3 = testFile3.Create();
+            tf3.Close();
+            //var test3PathName = Path.GetFileNameWithoutExtension(test3Path);
+            //Console.WriteLine(test3PathName);
+            testFile3.Delete();
 
 
         }
